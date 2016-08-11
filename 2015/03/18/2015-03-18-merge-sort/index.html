@@ -11,7 +11,7 @@
 解决：递归求解子问题（$\Theta(nlgn)$）
 合并（归并操作）：MERGE(A, s, q, e)，合并子问题的解为原问题的解（$\Theta(n)$）
 
-归并操作归并操作（merge）指将两个已经排序的序列合并曾一个序列">
+归并操作归并操作（merge）指将两个已经排序的序列合并为一个序列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="归并排序（merge sort）">
 <meta property="og:url" content="http://gotobenny.com/2015/03/18/2015-03-18-merge-sort/index.html">
@@ -22,9 +22,9 @@
 解决：递归求解子问题（$\Theta(nlgn)$）
 合并（归并操作）：MERGE(A, s, q, e)，合并子问题的解为原问题的解（$\Theta(n)$）
 
-归并操作归并操作（merge）指将两个已经排序的序列合并曾一个序列">
+归并操作归并操作（merge）指将两个已经排序的序列合并为一个序列">
 <meta property="og:image" content="http://gotobenny.com/images/2015-03-18/merge-sort.png">
-<meta property="og:updated_time" content="2015-03-18T14:21:30.000Z">
+<meta property="og:updated_time" content="2016-07-10T10:41:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="归并排序（merge sort）">
 <meta name="twitter:description" content="归并排序是创建在归并操作上的一种有效的排序算法。该算法是分治策略的一个非常典型的应用。
@@ -33,7 +33,7 @@
 解决：递归求解子问题（$\Theta(nlgn)$）
 合并（归并操作）：MERGE(A, s, q, e)，合并子问题的解为原问题的解（$\Theta(n)$）
 
-归并操作归并操作（merge）指将两个已经排序的序列合并曾一个序列">
+归并操作归并操作（merge）指将两个已经排序的序列合并为一个序列">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -58,7 +58,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">今夕何夕</p>
+		<p class="header-subtitle">巴萨7号</p>
 		
 
 		
@@ -166,7 +166,7 @@
 			  <h1 class="header-author">Benny Wong</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">今夕何夕</p>
+			<p class="header-subtitle">巴萨7号</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -247,7 +247,7 @@
 <li><strong>解决</strong>：递归求解子问题（$\Theta(nlgn)$）</li>
 <li><strong>合并</strong>（归并操作）：MERGE(A, s, q, e)，合并子问题的解为原问题的解（$\Theta(n)$）</li>
 </ol>
-<h3 id="归并操作">归并操作</h3><p>归并操作（merge）指将两个已经排序的序列合并曾一个序列操作。</p>
+<h3 id="归并操作">归并操作</h3><p>归并操作（merge）指将两个已经排序的序列合并为一个序列操作。</p>
 <p>归并操作过程如下：</p>
 <ol>
 <li>申请空间，以保存合并后的序列</li>
@@ -258,7 +258,7 @@
 </ol>
 <h3 id="图示">图示</h3><p><img src="/images/2015-03-18/merge-sort.png" alt="merge"></p>
 <h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MERGE-SORT(A, s, e)</span><br><span class="line">    <span class="keyword">if</span> s &lt; e</span><br><span class="line">        q = (s + e) / <span class="number">2</span> // 分解</span><br><span class="line">        MERGE-SORT(A, s, q) // 解决</span><br><span class="line">        MERGE-SORT(A, q + <span class="number">1</span>, e) // 解决</span><br><span class="line">        MERGE(A, s, q, e) // 合并</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">MERGE(A, s, q, e)</span><br><span class="line">    n1 = q - s + <span class="number">1</span></span><br><span class="line">    n2 = e - q</span><br><span class="line">    <span class="built_in">let</span> L[<span class="number">1</span>..n1+<span class="number">1</span>] and R[<span class="number">1</span>..n2+<span class="number">1</span>] be new array</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to n1 // 复制排序序列A</span><br><span class="line">        L[i] = A[s + i - <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">for</span> j = <span class="number">1</span> to n2 // 复制排序序列B</span><br><span class="line">        R[j] = A[q + j]</span><br><span class="line">    L[n1 + <span class="number">1</span>] = infty</span><br><span class="line">    L[n2 + <span class="number">1</span>] = infty</span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    j = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> k = s to e // 将排序序列A,B复制到合成序列</span><br><span class="line">        <span class="keyword">if</span> L[i] &lt;= R[j]</span><br><span class="line">            A[k] = L[i]</span><br><span class="line">            i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span> A[k] = R[k]</span><br><span class="line">            j = j + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">MERGE(A, s, q, e)</span><br><span class="line">    n1 = q - s + <span class="number">1</span></span><br><span class="line">    n2 = e - q</span><br><span class="line">    <span class="built_in">let</span> L[<span class="number">1</span>..n1+<span class="number">1</span>] and R[<span class="number">1</span>..n2+<span class="number">1</span>] be new array</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to n1 // 复制排序序列A</span><br><span class="line">        L[i] = A[s + i - <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">for</span> j = <span class="number">1</span> to n2 // 复制排序序列B</span><br><span class="line">        R[j] = A[q + j]</span><br><span class="line">    L[n1 + <span class="number">1</span>] = infty</span><br><span class="line">    L[n2 + <span class="number">1</span>] = infty</span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    j = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> k = s to e // 将排序序列A,B复制到合成序列</span><br><span class="line">        <span class="keyword">if</span> L[i] &lt;= R[j]</span><br><span class="line">            A[k] = L[i]</span><br><span class="line">            i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            A[k] = R[j]</span><br><span class="line">            j = j + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>时间复杂度：$T(n) = 2T(n/2) + cn = \Theta(nlgn)$</p>
 <p>归并排序是个稳定的算法，但需要$O(n)$的额外空间。</p>
 
@@ -339,7 +339,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 Benny Wong
+    		&copy; 2016 Benny Wong
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

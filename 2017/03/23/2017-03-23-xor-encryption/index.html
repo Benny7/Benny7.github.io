@@ -3,34 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>堆排序（heap sort） | Benny Wong</title>
+  <title>异或加密（xor encryption） | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="堆排序是利用堆积树（堆）这种数据结构所设计的排序算法。本质上堆排序是选择排序的一种。
-堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树节点对应数组元素。
-12345678PARENT(i) // 获取父节点    return i / 2LEFT(i) // 获取左孩子    return 2iRIGHT(i) // 获取右孩子    return 2i + 1
-图示：
-堆的形式
-最大堆（">
+  <meta name="description" content="异或加密是一种基于异或运算的加密算法。
+基本思想由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。
+&amp;lt;!-- ###伪代码
+``` bash
+XOR-ENCRYPTION(A, B)
+    for i = 1 to A.length
+        tmp 
+        for j = 1 to A.le">
 <meta property="og:type" content="article">
-<meta property="og:title" content="堆排序（heap sort）">
-<meta property="og:url" content="http://gotobenny.com/2015/03/19/2015-03-19-heap-sort/index.html">
+<meta property="og:title" content="异或加密（xor encryption）">
+<meta property="og:url" content="http://gotobenny.com/2017/03/23/2017-03-23-xor-encryption/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="堆排序是利用堆积树（堆）这种数据结构所设计的排序算法。本质上堆排序是选择排序的一种。
-堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树节点对应数组元素。
-12345678PARENT(i) // 获取父节点    return i / 2LEFT(i) // 获取左孩子    return 2iRIGHT(i) // 获取右孩子    return 2i + 1
-图示：
-堆的形式
-最大堆（">
-<meta property="og:image" content="http://gotobenny.com/images/2015-03-19/heap-sort.png">
-<meta property="og:updated_time" content="2015-03-19T14:53:52.000Z">
+<meta property="og:description" content="异或加密是一种基于异或运算的加密算法。
+基本思想由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。
+&amp;lt;!-- ###伪代码
+``` bash
+XOR-ENCRYPTION(A, B)
+    for i = 1 to A.length
+        tmp 
+        for j = 1 to A.le">
+<meta property="og:updated_time" content="2017-03-23T15:49:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="堆排序（heap sort）">
-<meta name="twitter:description" content="堆排序是利用堆积树（堆）这种数据结构所设计的排序算法。本质上堆排序是选择排序的一种。
-堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树节点对应数组元素。
-12345678PARENT(i) // 获取父节点    return i / 2LEFT(i) // 获取左孩子    return 2iRIGHT(i) // 获取右孩子    return 2i + 1
-图示：
-堆的形式
-最大堆（">
+<meta name="twitter:title" content="异或加密（xor encryption）">
+<meta name="twitter:description" content="异或加密是一种基于异或运算的加密算法。
+基本思想由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。
+&amp;lt;!-- ###伪代码
+``` bash
+XOR-ENCRYPTION(A, B)
+    for i = 1 to A.length
+        tmp 
+        for j = 1 to A.le">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -193,11 +198,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-2015-03-19-heap-sort" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2017-03-23-xor-encryption" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/19/2015-03-19-heap-sort/" class="article-date">
-  	<time datetime="2015-03-19T07:00:00.000Z" itemprop="datePublished">2015-03-19</time>
+      <a href="/2017/03/23/2017-03-23-xor-encryption/" class="article-date">
+  	<time datetime="2017-03-23T15:20:00.000Z" itemprop="datePublished">2017-03-23</time>
 </a>
     </div>
   
@@ -210,7 +215,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      堆排序（heap sort）
+      异或加密（xor encryption）
     </h1>
   
 
@@ -234,22 +239,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>堆排序</strong>是利用<strong>堆积树</strong>（<strong>堆</strong>）这种数据结构所设计的排序算法。本质上堆排序是<strong>选择排序</strong>的一种。</p>
-<h3 id="堆">堆</h3><p>堆（<strong>二叉堆</strong>）是一个数组，可以被看成近似的<strong>完全二叉树</strong>，树节点对应数组元素。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PARENT(i) // 获取父节点</span><br><span class="line">    <span class="built_in">return</span> i / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">LEFT(i) // 获取左孩子</span><br><span class="line">    <span class="built_in">return</span> <span class="number">2</span>i</span><br><span class="line"></span><br><span class="line">RIGHT(i) // 获取右孩子</span><br><span class="line">    <span class="built_in">return</span> <span class="number">2</span>i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>图示：<br><img src="/images/2015-03-19/heap-sort.png" alt="堆"></p>
-<h3 id="堆的形式">堆的形式</h3><ul>
-<li><strong>最大堆</strong>（满足<strong>最大堆性质</strong>）<br>除根外所有节点i满足：A[PARENT(i)] &gt;= A[i]</li>
-<li><strong>最小堆</strong>（满足<strong>最小堆性质</strong>）<br>除根外所有节点i满足：A[PARENT(i)] &lt;= A[i]</li>
-</ul>
-<h3 id="堆排序的基本过程（最大堆）">堆排序的基本过程（最大堆）</h3><ul>
-<li>MAX-HEAPIFY(A, i)：维护最大堆性质（$O(lgn)$）</li>
-<li>BUILD-MAX-HEAP(A)：从无序数组中构建最大堆（$O(n)$）</li>
-<li>HEAP-SORT(A)：进行原址排序（$O(nlgn)$）</li>
-</ul>
-<h3 id="维护堆的性质">维护堆的性质</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MAX-HEAPIFY(A, i)</span><br><span class="line">    l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.heap-size and A[l] &gt; A[i]</span><br><span class="line">        largest = l // 找出i, <span class="number">2</span>i, <span class="number">2</span>i + <span class="number">1</span>元素最大那个</span><br><span class="line">    <span class="keyword">else</span> largest = i // 找出i, <span class="number">2</span>i, <span class="number">2</span>i + <span class="number">1</span>元素最大那个</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.heap-size and A[r] &gt; A[largest]</span><br><span class="line">        largest = r // 找出i, <span class="number">2</span>i, <span class="number">2</span>i + <span class="number">1</span>元素最大那个</span><br><span class="line">    <span class="keyword">if</span> largest != i // 维持最大堆性质</span><br><span class="line">        exchange A[i] with A[largest]</span><br><span class="line">        MAX-HEAPIFY(A, largest)</span><br></pre></td></tr></table></figure>
-<h3 id="建堆">建堆</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">BUILD-MAX-HEAP(A)</span><br><span class="line">    A.heap-size = A.length</span><br><span class="line">    <span class="keyword">for</span> i = A.length / <span class="number">2</span> downto <span class="number">1</span> // 自底向上维护最大堆性质</span><br><span class="line">        MAX-HEAPIFY(A, i)</span><br></pre></td></tr></table></figure>
-<h3 id="堆排序">堆排序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HEAP-SORT(A)</span><br><span class="line">    BUILD-MAX-HEAP(A) // 建堆</span><br><span class="line">    <span class="keyword">for</span> i = A.length downto <span class="number">2</span> // 将根移除移到数组末端（排序）</span><br><span class="line">        exchange A[<span class="number">1</span>] with A[i]</span><br><span class="line">        A.heap-size = A.heap-size - <span class="number">1</span></span><br><span class="line">        MAX-HEAPIFY(A, <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+        <p><strong>异或加密</strong>是一种基于异或运算的加密算法。</p>
+<h3 id="基本思想">基本思想</h3><p>由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。</p>
+<!-- ###伪代码
+``` bash
+XOR-ENCRYPTION(A, B)
+    for i = 1 to A.length
+        tmp 
+        for j = 1 to A.length
+            B[C[A[j]]] = A[j]       // 排序
+``` -->
 
       
     </div>
@@ -259,18 +258,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/19/2015-03-19-priority-queue/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/20/2017-08-20-tree/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          优先队列（priority queue）
+          树（tree）
         
       </div>
     </a>
   
   
-    <a href="/2015/03/19/2015-03-19-selection-sort/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">选择排序（selection sort）</div>
+    <a href="/2015/05/12/2015-05-12-counting-sort/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计数排序（counting sort）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -304,7 +303,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015-03-19-heap-sort" data-title="堆排序（heap sort）" data-url="http://gotobenny.com/2015/03/19/2015-03-19-heap-sort/"></div>
+	<div class="ds-thread" data-thread-key="2017-03-23-xor-encryption" data-title="异或加密（xor encryption）" data-url="http://gotobenny.com/2017/03/23/2017-03-23-xor-encryption/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

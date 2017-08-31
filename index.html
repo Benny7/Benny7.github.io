@@ -281,14 +281,7 @@
       
         <p><strong>异或加密</strong>是一种基于异或运算的加密算法。</p>
 <h3 id="基本思想">基本思想</h3><p>由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。</p>
-<!-- ###伪代码
-``` bash
-XOR-ENCRYPTION(A, B)
-    for i = 1 to A.length
-        tmp 
-        for j = 1 to A.length
-            B[C[A[j]]] = A[j]       // 排序
-``` -->
+<h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">XOR-ENCRYPTION(A, B) // 加密</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to B.length // 正向加密</span><br><span class="line">        <span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">            A[j] = A[j] ^ B[i] // 异或运算</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">XOR_DECRYPTION(A, B) // 解密</span><br><span class="line">	<span class="keyword">for</span> i = B.length to <span class="number">1</span> // 反向解密</span><br><span class="line">		<span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">			A[j] = A[j] ^ B[i] // 异或运算</span><br></pre></td></tr></table></figure>
 
       
     </div>

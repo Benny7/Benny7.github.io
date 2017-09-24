@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Data Structures | Benny Wong</title>
+  <title>二叉树（binary tree） | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Benny Wong">
-<meta property="og:url" content="http://gotobenny.com/tags/Data-Structures/index.html">
+  <meta name="description" content="二叉树是一种度最大为2，即每个节点最多只有两个子节点（左孩子，右孩子）的树。
+特点
+二叉树的第i层最多有$2^(i-1)$个节点（等比数列）
+二叉树最多有$2^k-1$个节点，其中k为深度（等比数列的和）
+
+满二叉树满二叉树是指每一层都达到最大节点的二叉树（总共有$2^k-1$个节点，其中k为深度）
+完全二叉树完全二叉树是除了最后一层，其它层达到最大节点的二叉树（总共有$2^(k-1)$到$2^k">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树（binary tree）">
+<meta property="og:url" content="http://gotobenny.com/2017/09/17/2017-09-17-binary-tree/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description">
+<meta property="og:description" content="二叉树是一种度最大为2，即每个节点最多只有两个子节点（左孩子，右孩子）的树。
+特点
+二叉树的第i层最多有$2^(i-1)$个节点（等比数列）
+二叉树最多有$2^k-1$个节点，其中k为深度（等比数列的和）
+
+满二叉树满二叉树是指每一层都达到最大节点的二叉树（总共有$2^k-1$个节点，其中k为深度）
+完全二叉树完全二叉树是除了最后一层，其它层达到最大节点的二叉树（总共有$2^(k-1)$到$2^k">
+<meta property="og:updated_time" content="2017-09-17T07:05:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Benny Wong">
-<meta name="twitter:description">
+<meta name="twitter:title" content="二叉树（binary tree）">
+<meta name="twitter:description" content="二叉树是一种度最大为2，即每个节点最多只有两个子节点（左孩子，右孩子）的树。
+特点
+二叉树的第i层最多有$2^(i-1)$个节点（等比数列）
+二叉树最多有$2^k-1$个节点，其中k为深度（等比数列的和）
+
+满二叉树满二叉树是指每一层都达到最大节点的二叉树（总共有$2^k-1$个节点，其中k为深度）
+完全二叉树完全二叉树是除了最后一层，其它层达到最大节点的二叉树（总共有$2^(k-1)$到$2^k">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -176,275 +195,118 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2017-09-17-binary-tree" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/09/17/2017-09-17-binary-tree/" class="article-date">
+  	<time datetime="2017-09-17T04:20:00.000Z" itemprop="datePublished">2017-09-17</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      二叉树（binary tree）
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Programming/">Programming</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/17/2017-09-17-binary-tree/" class="archive-article-date">
-  	<time datetime="2017-09-17T04:20:00.000Z" itemprop="datePublished">9月 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/17/2017-09-17-binary-tree/">二叉树（binary tree）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/20/2017-08-20-tree/" class="archive-article-date">
-  	<time datetime="2017-08-20T15:20:00.000Z" itemprop="datePublished">8月 20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/20/2017-08-20-tree/">树（tree）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <p><strong>二叉树</strong>是一种度最大为2，即每个节点最多只有两个子节点（左孩子，右孩子）的树。</p>
+<h3 id="特点">特点</h3><ul>
+<li>二叉树的第i层最多有$2^(i-1)$个节点（等比数列）</li>
+<li>二叉树最多有$2^k-1$个节点，其中k为深度（等比数列的和）</li>
+</ul>
+<h3 id="满二叉树">满二叉树</h3><p><strong>满二叉树</strong>是指每一层都达到最大节点的二叉树（总共有$2^k-1$个节点，其中k为深度）</p>
+<h3 id="完全二叉树">完全二叉树</h3><p><strong>完全二叉树</strong>是除了最后一层，其它层达到最大节点的二叉树（总共有$2^(k-1)$到$2^k-1$个节点，其中k为深度）</p>
+
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
+    </div>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/18/2015-04-18-hash-table/" class="archive-article-date">
-  	<time datetime="2015-04-18T15:00:00.000Z" itemprop="datePublished">4月 18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/18/2015-04-18-hash-table/">散列表（hash table）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/20/2017-08-20-tree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树（tree）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/19/2015-03-19-linked-list/" class="archive-article-date">
-  	<time datetime="2015-03-19T15:00:00.000Z" itemprop="datePublished">3月 19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/19/2015-03-19-linked-list/">链表（linked list）</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_tqq"></a>
+		<a class="jiathis_button_qzone"></a>
+		<a class="jiathis_button_renren"></a>
+		<a class="jiathis_button_douban"></a>
+		<a href="http://www.jiathis.com/share?uid=2034862" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/18/2015-03-18-linear-list/" class="archive-article-date">
-  	<time datetime="2015-03-18T05:00:00.000Z" itemprop="datePublished">3月 18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/18/2015-03-18-linear-list/">线性表（linear list）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
+	<script type="text/javascript">
+	var jiathis_config = {data_track_clickback:'true'};
+	</script>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2034862" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/17/2015-03-17-queue/" class="archive-article-date">
-  	<time datetime="2015-03-17T07:16:00.000Z" itemprop="datePublished">3月 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/17/2015-03-17-queue/">队列（queue）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/17/2015-03-17-stack/" class="archive-article-date">
-  	<time datetime="2015-03-17T06:13:00.000Z" itemprop="datePublished">3月 17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/17/2015-03-17-stack/">栈（stack）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2017-09-17-binary-tree" data-title="二叉树（binary tree）" data-url="http://gotobenny.com/2017/09/17/2017-09-17-binary-tree/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"bennywong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+
 </div>
       <footer id="footer">
   <div class="outer">

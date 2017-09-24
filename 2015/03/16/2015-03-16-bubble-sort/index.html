@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Benny Wong">
 <meta property="og:description" content="基本思想通过相邻元素两两比较将最大或最小的元素往上浮，直到排序完成。
 伪代码12345BUBBLE-SORT(A)    for i = 1 to A.length - 1        for j = A.length downto i + 1            if A[j] &amp;lt; A[j - 1]                exchange A[j] with A[j - 1]">
-<meta property="og:updated_time" content="2015-03-17T16:40:16.000Z">
+<meta property="og:updated_time" content="2017-09-24T10:11:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="冒泡排序（bubble sort）">
 <meta name="twitter:description" content="基本思想通过相邻元素两两比较将最大或最小的元素往上浮，直到排序完成。
@@ -223,7 +223,7 @@
       
         <h3 id="基本思想">基本思想</h3><p>通过相邻元素两两比较将最大或最小的元素往上浮，直到排序完成。</p>
 <h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BUBBLE-SORT(A)</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to A.length - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> j = A.length downto i + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; A[j - <span class="number">1</span>]</span><br><span class="line">                exchange A[j] with A[j - <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$T(n) = \Theta(n^2)$</p>
+<p>时间复杂度：$T(n) = O(n^2)$</p>
 <p>冒泡排序是个稳定的排序算法，但效率比较低。</p>
 
       

@@ -18,7 +18,7 @@
 图示
 伪代码1234567891011121314COUNTING-SORT(A, B, k)    let C[0..k] be a new array    for i = 0 to k        C[i] = 0    fo">
 <meta property="og:image" content="http://gotobenny.com/images/2015-05-12/counting-sort.png">
-<meta property="og:updated_time" content="2015-10-07T07:06:31.000Z">
+<meta property="og:updated_time" content="2017-09-24T10:11:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计数排序（counting sort）">
 <meta name="twitter:description" content="计数排序是一种非基于比较的排序算法。
@@ -232,7 +232,7 @@
 <h3 id="基本思想">基本思想</h3><p>对输入序列中的某个元素x，统计不大于x的元素的个数n，则x就可直接放在第n+1个位置（$x \in [0, k]$）。</p>
 <h3 id="图示">图示</h3><p><img src="/images/2015-05-12/counting-sort.png" alt="计数排序"></p>
 <h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">COUNTING-SORT(A, B, k)</span><br><span class="line">    <span class="built_in">let</span> C[<span class="number">0</span>..k] be a new array</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">0</span> to k</span><br><span class="line">        C[i] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">        C[A[j]] = C[A[j]] + <span class="number">1</span>   // 计算等于A[j]的个数</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to k</span><br><span class="line">        C[i] = C[i] + C[i - <span class="number">1</span>]  // 计算不大于A[j]的个数</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> j = A.length downto <span class="number">1</span></span><br><span class="line">        B[C[A[j]]] = A[j]       // 排序</span><br><span class="line">        C[A[j]] = C[A[j]] - <span class="number">1</span>   // 计数 - <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$T(n) = \Theta(n + k)$<br>当$k = O(n)$时，$T(n) = \Theta(n)$</p>
+<p>时间复杂度：$T(n) = O(n + k)$<br>当$k = O(n)$时，$T(n) = O(n)$</p>
 <p>选择排序是稳定的排序算法。</p>
 
       

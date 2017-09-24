@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Benny Wong">
 <meta property="og:description" content="基本思想：从一堆乱序的序列中依次抽取一个数，从后往前扫描已排序序列，将抽取的数插入已排序序列相应位置（相当于给乱序的扑克牌排序）
 伪代码：12345678INSERTION-SORT(A)    for j = 2 to A.length        key = A[j]        i = j - 1        while i &amp;gt; 0 and A[i] &amp;gt; key">
-<meta property="og:updated_time" content="2015-03-15T18:04:04.000Z">
+<meta property="og:updated_time" content="2017-09-24T10:11:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插入排序（insertion sort）">
 <meta name="twitter:description" content="基本思想：从一堆乱序的序列中依次抽取一个数，从后往前扫描已排序序列，将抽取的数插入已排序序列相应位置（相当于给乱序的扑克牌排序）
@@ -223,7 +223,7 @@
       
         <h3 id="基本思想：">基本思想：</h3><p>从一堆乱序的序列中依次抽取一个数，从后往前扫描已排序序列，将抽取的数插入已排序序列相应位置（相当于给乱序的扑克牌排序）</p>
 <h3 id="伪代码：">伪代码：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">INSERTION-SORT(A)</span><br><span class="line">    <span class="keyword">for</span> j = <span class="number">2</span> to A.length</span><br><span class="line">        key = A[j]</span><br><span class="line">        i = j - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &gt; <span class="number">0</span> and A[i] &gt; key</span><br><span class="line">            A[i + <span class="number">1</span>] = A[i]</span><br><span class="line">            i = i - <span class="number">1</span></span><br><span class="line">        A[i + <span class="number">1</span>] = key</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$T(n) = \Theta(n^2)$</p>
+<p>时间复杂度：$T(n) = O(n^2)$</p>
 <p>插入排序是个稳定的排序算法，当输入规模比较小时，插入排序是个不错的选择。</p>
 
       

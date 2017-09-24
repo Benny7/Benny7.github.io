@@ -21,7 +21,7 @@
 堆排序：通过堆来排序
 
 伪代码（简单选择排序）12345678SELECTION-SORT(A)    for i = 1 to A.length - 1        min = i        for j = i + 1 to A.length // 遍历选择最小元素">
-<meta property="og:updated_time" content="2016-07-10T10:05:36.000Z">
+<meta property="og:updated_time" content="2017-09-24T10:11:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="选择排序（selection sort）">
 <meta name="twitter:description" content="基本思想每次遍历待排序序列，选出最大或最小的元素移到已排序序列对头或队尾
@@ -239,7 +239,7 @@
 <li><strong>堆排序</strong>：通过堆来排序</li>
 </ol>
 <h3 id="伪代码（简单选择排序）">伪代码（简单选择排序）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECTION-SORT(A)</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to A.length - <span class="number">1</span></span><br><span class="line">        min = i</span><br><span class="line">        <span class="keyword">for</span> j = i + <span class="number">1</span> to A.length // 遍历选择最小元素</span><br><span class="line">            <span class="keyword">if</span> A[min] &gt; A[j]</span><br><span class="line">                min = j</span><br><span class="line">        <span class="keyword">if</span> min != i</span><br><span class="line">            exchange A[min] with A[i]</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$T(n) = \Theta(n^2)$</p>
+<p>时间复杂度：$T(n) = O(n^2)$</p>
 <p>选择排序不是稳定的排序算法，并且通常选择排序比冒泡排序更快。</p>
 
       

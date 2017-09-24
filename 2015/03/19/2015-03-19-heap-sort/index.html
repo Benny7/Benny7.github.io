@@ -6,31 +6,31 @@
   <title>堆排序（heap sort） | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="堆排序是利用堆积树（堆）这种数据结构所设计的排序算法。本质上堆排序是选择排序的一种。
-堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树节点对应数组元素。
+堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树点对应数组元素。
 12345678PARENT(i) // 获取父节点    return i / 2LEFT(i) // 获取左孩子    return 2iRIGHT(i) // 获取右孩子    return 2i + 1
 图示：
 堆的形式
-最大堆（">
+最大堆（满">
 <meta property="og:type" content="article">
 <meta property="og:title" content="堆排序（heap sort）">
 <meta property="og:url" content="http://gotobenny.com/2015/03/19/2015-03-19-heap-sort/index.html">
 <meta property="og:site_name" content="Benny Wong">
 <meta property="og:description" content="堆排序是利用堆积树（堆）这种数据结构所设计的排序算法。本质上堆排序是选择排序的一种。
-堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树节点对应数组元素。
+堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树点对应数组元素。
 12345678PARENT(i) // 获取父节点    return i / 2LEFT(i) // 获取左孩子    return 2iRIGHT(i) // 获取右孩子    return 2i + 1
 图示：
 堆的形式
-最大堆（">
+最大堆（满">
 <meta property="og:image" content="http://gotobenny.com/images/2015-03-19/heap-sort.png">
-<meta property="og:updated_time" content="2015-03-19T14:53:52.000Z">
+<meta property="og:updated_time" content="2017-09-24T09:04:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆排序（heap sort）">
 <meta name="twitter:description" content="堆排序是利用堆积树（堆）这种数据结构所设计的排序算法。本质上堆排序是选择排序的一种。
-堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树节点对应数组元素。
+堆堆（二叉堆）是一个数组，可以被看成近似的完全二叉树，树点对应数组元素。
 12345678PARENT(i) // 获取父节点    return i / 2LEFT(i) // 获取左孩子    return 2iRIGHT(i) // 获取右孩子    return 2i + 1
 图示：
 堆的形式
-最大堆（">
+最大堆（满">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -235,7 +235,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>堆排序</strong>是利用<strong>堆积树</strong>（<strong>堆</strong>）这种数据结构所设计的排序算法。本质上堆排序是<strong>选择排序</strong>的一种。</p>
-<h3 id="堆">堆</h3><p>堆（<strong>二叉堆</strong>）是一个数组，可以被看成近似的<strong>完全二叉树</strong>，树节点对应数组元素。</p>
+<h3 id="堆">堆</h3><p>堆（<strong>二叉堆</strong>）是一个数组，可以被看成近似的<strong>完全二叉树</strong>，树点对应数组元素。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">PARENT(i) // 获取父节点</span><br><span class="line">    <span class="built_in">return</span> i / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">LEFT(i) // 获取左孩子</span><br><span class="line">    <span class="built_in">return</span> <span class="number">2</span>i</span><br><span class="line"></span><br><span class="line">RIGHT(i) // 获取右孩子</span><br><span class="line">    <span class="built_in">return</span> <span class="number">2</span>i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>图示：<br><img src="/images/2015-03-19/heap-sort.png" alt="堆"></p>
 <h3 id="堆的形式">堆的形式</h3><ul>

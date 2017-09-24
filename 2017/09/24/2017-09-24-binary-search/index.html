@@ -3,34 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>队列（queue） | Benny Wong</title>
+  <title>二分搜索（binary search） | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="队列是一种动态集合，并且限定了动态集合的DELETE操作所移除的元素是最先插入的元素。栈实现的是一种先进先出（first-in，first-out，FIFO）的策略。
-队列可视为一种线性表，通过限定在线性表的前端进行插入，在后端进行删除操作来实现FIFO。
-队列的作用队列可以用于对序列实行顺序操作。
-队列的操作
-ENQUEUE(Q, x)： 入队（$O(1)$）
-DEQUEUE(Q)： 出队（$O">
+  <meta name="description" content="二分搜索是一种在有序表搜索特定元素的搜索算法
+基本思想搜索过程中每次将搜索范围缩小一半，直到最终确定是否存在搜索的元素
+时间复杂度：$T(n) = O(lgn)$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="队列（queue）">
-<meta property="og:url" content="http://gotobenny.com/2015/03/17/2015-03-17-queue/index.html">
+<meta property="og:title" content="二分搜索（binary search）">
+<meta property="og:url" content="http://gotobenny.com/2017/09/24/2017-09-24-binary-search/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="队列是一种动态集合，并且限定了动态集合的DELETE操作所移除的元素是最先插入的元素。栈实现的是一种先进先出（first-in，first-out，FIFO）的策略。
-队列可视为一种线性表，通过限定在线性表的前端进行插入，在后端进行删除操作来实现FIFO。
-队列的作用队列可以用于对序列实行顺序操作。
-队列的操作
-ENQUEUE(Q, x)： 入队（$O(1)$）
-DEQUEUE(Q)： 出队（$O">
-<meta property="og:image" content="http://gotobenny.com/images/2015-03-17/queue.png">
-<meta property="og:updated_time" content="2017-09-24T10:11:10.000Z">
+<meta property="og:description" content="二分搜索是一种在有序表搜索特定元素的搜索算法
+基本思想搜索过程中每次将搜索范围缩小一半，直到最终确定是否存在搜索的元素
+时间复杂度：$T(n) = O(lgn)$">
+<meta property="og:updated_time" content="2017-09-24T10:08:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="队列（queue）">
-<meta name="twitter:description" content="队列是一种动态集合，并且限定了动态集合的DELETE操作所移除的元素是最先插入的元素。栈实现的是一种先进先出（first-in，first-out，FIFO）的策略。
-队列可视为一种线性表，通过限定在线性表的前端进行插入，在后端进行删除操作来实现FIFO。
-队列的作用队列可以用于对序列实行顺序操作。
-队列的操作
-ENQUEUE(Q, x)： 入队（$O(1)$）
-DEQUEUE(Q)： 出队（$O">
+<meta name="twitter:title" content="二分搜索（binary search）">
+<meta name="twitter:description" content="二分搜索是一种在有序表搜索特定元素的搜索算法
+基本思想搜索过程中每次将搜索范围缩小一半，直到最终确定是否存在搜索的元素
+时间复杂度：$T(n) = O(lgn)$">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -193,11 +183,11 @@ DEQUEUE(Q)： 出队（$O">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-2015-03-17-queue" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2017-09-24-binary-search" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/17/2015-03-17-queue/" class="article-date">
-  	<time datetime="2015-03-17T07:16:00.000Z" itemprop="datePublished">2015-03-17</time>
+      <a href="/2017/09/24/2017-09-24-binary-search/" class="article-date">
+  	<time datetime="2017-09-24T08:00:00.000Z" itemprop="datePublished">2017-09-24</time>
 </a>
     </div>
   
@@ -210,7 +200,7 @@ DEQUEUE(Q)： 出队（$O">
         
   
     <h1 class="article-title" itemprop="name">
-      队列（queue）
+      二分搜索（binary search）
     </h1>
   
 
@@ -219,7 +209,7 @@ DEQUEUE(Q)： 出队（$O">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithms/">Algorithms</a></li></ul>
 	</div>
 
         
@@ -234,21 +224,9 @@ DEQUEUE(Q)： 出队（$O">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>队列</strong>是一种动态集合，并且限定了动态集合的DELETE操作所移除的元素是最先插入的元素。栈实现的是一种<strong>先进先出</strong>（first-in，first-out，FIFO）的策略。</p>
-<p>队列可视为一种<strong>线性表</strong>，通过限定在线性表的前端进行插入，在后端进行删除操作来实现FIFO。</p>
-<h3 id="队列的作用">队列的作用</h3><p>队列可以用于对序列实行顺序操作。</p>
-<h3 id="队列的操作">队列的操作</h3><ol>
-<li>ENQUEUE(Q, x)： 入队（$O(1)$）</li>
-<li>DEQUEUE(Q)： 出队（$O(1)$）</li>
-</ol>
-<h3 id="队列的模型">队列的模型</h3><p><img src="/images/2015-03-17/queue.png" alt="队列的模型"></p>
-<h3 id="队列的实现">队列的实现</h3><ol>
-<li><strong>顺序队列</strong>：使用数组实现，设head和tail指针分别指向队头和队尾，在队尾进行插入操作，在队头进行删除操作</li>
-<li><strong>链式队列</strong>：使用链表实现，设head和tail指针分别指向队头和队尾，在队尾进行插入操作，在队头进行删除操作</li>
-</ol>
-<h3 id="伪代码（使用数组实现）">伪代码（使用数组实现）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ENQUEUE(Q, x)</span><br><span class="line">    Q[Q.tail] = x</span><br><span class="line">    <span class="keyword">if</span> Q.tail == Q.length</span><br><span class="line">        Q.tail = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span> Q.tail = Q.tail + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DEQUEUE(Q)</span><br><span class="line">    x = Q[Q.head]</span><br><span class="line">    <span class="keyword">if</span> Q.head == Q.length</span><br><span class="line">        Q.head = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span> Q.head = Q.head + <span class="number">1</span></span><br><span class="line">    <span class="built_in">return</span> x</span><br></pre></td></tr></table></figure>
-<h3 id="双端队列">双端队列</h3><p>具有队列和栈性质的数据结构，双端队列的插入和删除操作可以在两端进行。</p>
+        <p><strong>二分搜索</strong>是一种在有序表搜索特定元素的搜索算法</p>
+<h3 id="基本思想">基本思想</h3><p>搜索过程中每次将搜索范围缩小一半，直到最终确定是否存在搜索的元素</p>
+<p>时间复杂度：$T(n) = O(lgn)$</p>
 
       
     </div>
@@ -258,18 +236,9 @@ DEQUEUE(Q)： 出队（$O">
     
 <nav id="article-nav">
   
-    <a href="/2015/03/18/2015-03-18-linear-list/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          线性表（linear list）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/17/2015-03-17-stack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">栈（stack）</div>
+    <a href="/2017/09/17/2017-09-17-binary-tree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树（binary tree）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -303,7 +272,7 @@ DEQUEUE(Q)： 出队（$O">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015-03-17-queue" data-title="队列（queue）" data-url="http://gotobenny.com/2015/03/17/2015-03-17-queue/"></div>
+	<div class="ds-thread" data-thread-key="2017-09-24-binary-search" data-title="二分搜索（binary search）" data-url="http://gotobenny.com/2017/09/24/2017-09-24-binary-search/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

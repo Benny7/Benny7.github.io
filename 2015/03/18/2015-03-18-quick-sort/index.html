@@ -7,36 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="快速排序，又称分区交换排序，是对冒泡排序的一种改进。快速排序是分治策略的一个典型应用。
 快速排序步骤
-分解：PARTITION(A, s, e)，将原问题分解为两个子问题（$\Theta(n)$）
-解决：QUICK-SORT(A, s, e)，递归求解子问题（$\Theta(nlgn)$）
+分解：PARTITION(A, s, e)，将原问题分解为两个子问题（$O(n)$）
+解决：QUICK-SORT(A, s, e)，递归求解子问题（$O(nlgn)$）
 合并：不需要
 
 图示
-伪代码普通版本：123456789PARTITION(A, s, e)    x =">
+伪代码普通版本：123456789PARTITION(A, s, e)    x = A[e]    i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速排序（quick sort）">
 <meta property="og:url" content="http://gotobenny.com/2015/03/18/2015-03-18-quick-sort/index.html">
 <meta property="og:site_name" content="Benny Wong">
 <meta property="og:description" content="快速排序，又称分区交换排序，是对冒泡排序的一种改进。快速排序是分治策略的一个典型应用。
 快速排序步骤
-分解：PARTITION(A, s, e)，将原问题分解为两个子问题（$\Theta(n)$）
-解决：QUICK-SORT(A, s, e)，递归求解子问题（$\Theta(nlgn)$）
+分解：PARTITION(A, s, e)，将原问题分解为两个子问题（$O(n)$）
+解决：QUICK-SORT(A, s, e)，递归求解子问题（$O(nlgn)$）
 合并：不需要
 
 图示
-伪代码普通版本：123456789PARTITION(A, s, e)    x =">
+伪代码普通版本：123456789PARTITION(A, s, e)    x = A[e]    i">
 <meta property="og:image" content="http://gotobenny.com/images/2015-03-18/quick-sort.png">
-<meta property="og:updated_time" content="2015-03-18T14:22:28.000Z">
+<meta property="og:updated_time" content="2017-09-24T10:11:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速排序（quick sort）">
 <meta name="twitter:description" content="快速排序，又称分区交换排序，是对冒泡排序的一种改进。快速排序是分治策略的一个典型应用。
 快速排序步骤
-分解：PARTITION(A, s, e)，将原问题分解为两个子问题（$\Theta(n)$）
-解决：QUICK-SORT(A, s, e)，递归求解子问题（$\Theta(nlgn)$）
+分解：PARTITION(A, s, e)，将原问题分解为两个子问题（$O(n)$）
+解决：QUICK-SORT(A, s, e)，递归求解子问题（$O(nlgn)$）
 合并：不需要
 
 图示
-伪代码普通版本：123456789PARTITION(A, s, e)    x =">
+伪代码普通版本：123456789PARTITION(A, s, e)    x = A[e]    i">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -242,8 +242,8 @@
       
         <p><strong>快速排序</strong>，又称<strong>分区交换排序</strong>，是对冒泡排序的一种改进。快速排序是<strong>分治策略</strong>的一个典型应用。</p>
 <h3 id="快速排序步骤">快速排序步骤</h3><ol>
-<li><strong>分解</strong>：PARTITION(A, s, e)，将原问题分解为两个子问题（$\Theta(n)$）</li>
-<li><strong>解决</strong>：QUICK-SORT(A, s, e)，递归求解子问题（$\Theta(nlgn)$）</li>
+<li><strong>分解</strong>：PARTITION(A, s, e)，将原问题分解为两个子问题（$O(n)$）</li>
+<li><strong>解决</strong>：QUICK-SORT(A, s, e)，递归求解子问题（$O(nlgn)$）</li>
 <li><strong>合并</strong>：不需要</li>
 </ol>
 <h3 id="图示">图示</h3><p><img src="/images/2015-03-18/quick-sort.png" alt="快速排序划分"></p>
@@ -251,7 +251,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">QUICK-SORT(A, s, e)</span><br><span class="line">    <span class="keyword">if</span> s &lt; e</span><br><span class="line">        q = PARTITION(A, s, e) // 分解</span><br><span class="line">        QUICK-SORT(A, s, q - <span class="number">1</span>) // 解决</span><br><span class="line">        QUICK-SORT(A, q + <span class="number">1</span>, e) // 解决</span><br></pre></td></tr></table></figure>
 <p><strong>随机化版本：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RANDOMIZED-PARTITION(A, s, e)</span><br><span class="line">    i = RANDOM(s, e)</span><br><span class="line">    exchange A[e] with A[i]</span><br><span class="line">    <span class="built_in">return</span> PARTITION(A, s, e)</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RANDOMIZED-QUICK-SORT(A, s, e)</span><br><span class="line">    <span class="keyword">if</span> s &lt; e</span><br><span class="line">        q = RANDOMIZED-PARTITION(A, s, e) // 分解</span><br><span class="line">        RANDOMIZED-QUICK-SORT(A, s, q - <span class="number">1</span>) // 解决</span><br><span class="line">        RANDOMIZED-QUICK-SORT(A, q + <span class="number">1</span>, e) // 解决</span><br></pre></td></tr></table></figure>
-<p>时间复杂度（期望）：$T(n) = \Theta(nlgn)$</p>
+<p>时间复杂度（期望）：$T(n) = O(nlgn)$</p>
 <p>快速排序的平均性能非常好，而且是原址排序，通常是实际排序应用中最好的选择。但快速排序不是稳定的算法。</p>
 
       

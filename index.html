@@ -110,7 +110,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 16.67px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a> <a href="/tags/Shader/" style="font-size: 13.33px;">Shader</a>
+						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 15px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
 					</div>
 				</section>
 				
@@ -195,7 +195,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/24/2017-09-24-binary-search/">二分搜索（binary search）</a>
+      <a class="article-title" href="/2017/09/24/2017-09-24-binary-search/">二分查找（binary search）</a>
     </h1>
   
 
@@ -204,9 +204,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>二分搜索</strong>是一种在有序表搜索特定元素的搜索算法</p>
-<h3 id="基本思想">基本思想</h3><p>搜索过程中每次将搜索范围缩小一半，直到最终确定是否存在搜索的元素</p>
+        <p><strong>二分查找</strong>是一种在有序表（逻辑结构上有序）查找特定元素的查找算法</p>
+<h3 id="基本思想">基本思想</h3><p>查找过程中每次将查找范围缩小一半，直到最终确定是否存在目标元素</p>
 <p>时间复杂度：$T(n) = O(lgn)$</p>
+<h3 id="理解">理解</h3><p>二分查找的关键在于快速定位中间值并缩小问题规模，所以像顺序表这种存储结构上有序数据结构很适合使用二分查找，链表由于无法快速定位中间值，所以不适合使用二分查找，顺序表虽然查找快速，但插入很慢，很多时候我们即需要高效的查找效率，同时也需要高效的插入和删除效率，这样一种即支持二分查找又拥有链式结构插入删除效率的数据结构就是<strong>二分查找树</strong></p>
 
       
     </div>
@@ -2171,133 +2172,13 @@
 
 
   
-    <article id="post-2015-02-18-cocos2dx-shader-armature" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/02/18/2015-02-18-cocos2dx-shader-armature/" class="article-date">
-  	<time datetime="2015-02-17T18:37:00.000Z" itemprop="datePublished">2015-02-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/18/2015-02-18-cocos2dx-shader-armature/">Cocos2d-x使用自定义Shader - CCArmature</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前说过在CCSprite使用自定义shader，这个用在帧动画上倒是可以，但因为后来新项目用到骨骼动画（CCArmature），于是催生出在CCArmature上使用shader的需求，对CCArmature使用自定义shader本质上和对CCSprite使用自定义shader一样，CCArmature本身也带有一个默认shader，并且在draw函数里也是通过宏定义CC_NODE_DRAW_SETUP给shader传数据。</p>
-<h3 id="封装shader">封装shader</h3><p><img src="/images/2015-02-18/armature_shader.png" alt="封装shader"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shader/">Shader</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-2015-02-18-cocos2dx-shader-sprite" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/02/18/2015-02-18-cocos2dx-shader-sprite/" class="article-date">
-  	<time datetime="2015-02-17T17:20:00.000Z" itemprop="datePublished">2015-02-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/18/2015-02-18-cocos2dx-shader-sprite/">Cocos2d-x使用自定义Shader - CCSprite</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前段时间被老大要求用cocos2d-x添加一个泛白的shader，并将其泛白的过程封装成一个action以方便使用，由于需要作用shader的对象是个帧动画，所以很自然的就在CCSprite上添加shader，其实CCSprite上本身就带了一个默认的shader，我们只要将其改为自定义的shader并在draw为其传入自定义数据就行了（CCSprite draw函数中的宏定义CC_NODE_DRAW_SETUP就是用来传数据给shader的），cocos2d-x的sample有演示在CCSprite上自定义shader的用法，在此基础上修改一下就可以用了。</p>
-<p>不过sample里的shader程序（CCGLProgram）每次创建对象时都要重新生成，实际应用中一般都会反复用到shader程序，重复创建很影响效率，所以我给CCGLProgram添加了缓存，对于shader程序的缓存cocos2d-x也给了封装（CCShaderCache），用起来很方便。</p>
-<h3 id="封装shader">封装shader</h3><p><img src="/images/2015-02-18/sprite_shader.png" alt="封装shader"></p>
-<h3 id="封装action">封装action</h3><p><img src="/images/2015-02-18/action_value.png" alt="封装action"></p>
-<h3 id="Shader代码">Shader代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//shader.vsh</span><br><span class="line">attribute vec4 a_position;</span><br><span class="line">attribute vec2 a_texCoord;</span><br><span class="line">attribute vec4 a_color;</span><br><span class="line"></span><br><span class="line"><span class="comment">#ifdef GL_ES</span></span><br><span class="line">varying lowp vec4 v_fragmentColor;</span><br><span class="line">varying mediump vec2 v_texCoord;</span><br><span class="line"><span class="comment">#else</span></span><br><span class="line">varying vec4 v_fragmentColor;</span><br><span class="line">varying vec2 v_texCoord;</span><br><span class="line"><span class="comment">#endif</span></span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">    gl_Position = CC_MVPMatrix * a_position;</span><br><span class="line">    v_fragmentColor = a_color;</span><br><span class="line">    v_texCoord = a_texCoord;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// shader.vsh</span><br><span class="line"><span class="comment">#ifdef GL_ES</span></span><br><span class="line">precision lowp <span class="built_in">float</span>;</span><br><span class="line"><span class="comment">#endif</span></span><br><span class="line"></span><br><span class="line">varying vec4 v_fragmentColor;</span><br><span class="line">varying vec2 v_texCoord;</span><br><span class="line">uniform sampler2D CC_Texture0;</span><br><span class="line"></span><br><span class="line">uniform <span class="built_in">float</span> value;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">main</span></span>() &#123;</span><br><span class="line">    vec4 base = texture2D(CC_Texture0, v_texCoord);</span><br><span class="line">    gl_FragColor = v_fragmentColor * my_<span class="keyword">function</span>(base, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shader/">Shader</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Programming/">Programming</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
   
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Benny Wong
+    		&copy; 2018 Benny Wong
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

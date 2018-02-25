@@ -3,24 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异或加密（xor encryption） | Benny Wong</title>
+  <title>Archives: 2018 | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="异或加密是一种基于异或运算的加密算法。
-基本思想由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。
-伪代码12345678910XOR_ENCRYPTION(A, B) // 加密    for i = 1 to B.length // 正向加密        for j = 1 to A.length">
-<meta property="og:type" content="article">
-<meta property="og:title" content="异或加密（xor encryption）">
-<meta property="og:url" content="http://gotobenny.com/2017/03/23/2017-03-23-xor-encryption/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Benny Wong">
+<meta property="og:url" content="http://gotobenny.com/archives/2018/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="异或加密是一种基于异或运算的加密算法。
-基本思想由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。
-伪代码12345678910XOR_ENCRYPTION(A, B) // 加密    for i = 1 to B.length // 正向加密        for j = 1 to A.length">
-<meta property="og:updated_time" content="2018-02-25T15:18:20.732Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异或加密（xor encryption）">
-<meta name="twitter:description" content="异或加密是一种基于异或运算的加密算法。
-基本思想由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。
-伪代码12345678910XOR_ENCRYPTION(A, B) // 加密    for i = 1 to B.length // 正向加密        for j = 1 to A.length">
+<meta name="twitter:title" content="Benny Wong">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -183,123 +176,55 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-2017-03-23-xor-encryption" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2017/03/23/2017-03-23-xor-encryption/" class="article-date">
-  	<time datetime="2017-03-23T15:20:00.000Z" itemprop="datePublished">2017-03-23</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/02/25/2018-02-25-data-type-and-structure/" class="archive-article-date">
+  	<time datetime="2018-02-25T15:41:00.000Z" itemprop="datePublished">2月 25</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      异或加密（xor encryption）
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/02/25/2018-02-25-data-type-and-structure/">数据类型和数据结构</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithms/">Algorithms</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
 	</div>
 
-        
+          
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/Programming/">Programming</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>异或加密</strong>是一种基于异或运算的加密算法。</p>
-<h3 id="基本思想">基本思想</h3><p>由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。</p>
-<h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">XOR_ENCRYPTION(A, B) // 加密</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to B.length // 正向加密</span><br><span class="line">        <span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">            A[j] = A[j] ^ B[i] // 异或运算</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">XOR_DECRYPTION(A, B) // 解密</span><br><span class="line">	<span class="keyword">for</span> i = B.length to <span class="number">1</span> // 反向解密</span><br><span class="line">		<span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">			A[j] = A[j] ^ B[i] // 异或运算</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/08/20/2017-08-20-tree/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          树（tree）
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/05/12/2015-05-12-counting-sort/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">计数排序（counting sort）</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
-
-
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_tqq"></a>
-		<a class="jiathis_button_qzone"></a>
-		<a class="jiathis_button_renren"></a>
-		<a class="jiathis_button_douban"></a>
-		<a href="http://www.jiathis.com/share?uid=2034862" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript">
-	var jiathis_config = {data_track_clickback:'true'};
-	</script>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2034862" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2017-03-23-xor-encryption" data-title="异或加密（xor encryption）" data-url="http://gotobenny.com/2017/03/23/2017-03-23-xor-encryption/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"bennywong"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+  
+  
+    </div></section>
+  
 </div>
       <footer id="footer">
   <div class="outer">

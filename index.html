@@ -178,6 +178,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-2018-02-25-data-type-and-structure" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/25/2018-02-25-data-type-and-structure/" class="article-date">
+  	<time datetime="2018-02-25T15:41:00.000Z" itemprop="datePublished">2018-02-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/25/2018-02-25-data-type-and-structure/">数据类型和数据结构</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>数据类型</strong>（data type）：强调数据的类型定义，即数据的存储和使用方式</p>
+<ul>
+<li><strong>原子数据类型</strong>（低层次抽象）：即需要关注数据的逻辑特征，也需要关注数据的物理特征</li>
+<li><strong>抽象数据类型</strong>（高层次抽象）：只需要关注数据的逻辑特征，不需要关注数据的物理特征</li>
+</ul>
+<p><strong>数据结构</strong>（data structure）：强调数据的结构，即数据的存储和组织方式<br>    即需要关注数据的逻辑结构，也需要关注数据的物理结构</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Structures/">Data Structures</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Programming/">Programming</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-2017-09-24-binary-search" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -206,6 +268,7 @@
       
         <p><strong>二分查找</strong>是一种在有序表（逻辑结构上有序）查找特定元素的查找算法</p>
 <h3 id="基本思想">基本思想</h3><p>查找过程中每次将查找范围缩小一半，直到最终确定是否存在目标元素</p>
+<h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">BINARY_SEARCH(A, v, s, e)</span><br><span class="line">	<span class="keyword">if</span> s &gt; e</span><br><span class="line">		<span class="built_in">return</span> None // 找不到目标元素</span><br><span class="line">	mid = (s + e) / <span class="number">2</span></span><br><span class="line">	<span class="keyword">if</span> A[mid] == v</span><br><span class="line">		<span class="built_in">return</span> mid // 找到目标元素</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> A[mid] &lt; v </span><br><span class="line">		BINARY_SEARCH(A, v, mid, e) // 目标元素在右边</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		BINARY_SEARCH(A, v, s, mid) // 目标元素在左边</span><br></pre></td></tr></table></figure>
 <p>时间复杂度：$T(n) = O(lgn)$</p>
 <h3 id="理解">理解</h3><p>二分查找的关键在于快速定位中间值并缩小问题规模，所以像顺序表这种存储结构上有序的数据结构就很适合使用二分查找，链表由于无法快速定位中间值，所以不适合使用二分查找，顺序表虽然查找快速，但插入很慢，很多时候我们即需要高效的查找效率，同时也需要高效的插入和删除效率，这样一种即支持二分查找又拥有链式结构插入删除效率的数据结构就是<strong>二分查找树</strong></p>
 
@@ -406,7 +469,7 @@
       
         <p><strong>异或加密</strong>是一种基于异或运算的加密算法。</p>
 <h3 id="基本思想">基本思想</h3><p>由于A xor B = C，C xor B = A，所以将明文A和秘钥B做异或运算可加密成密文C，将密文C和秘钥B做异或运算解密回明文A。</p>
-<h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">XOR-ENCRYPTION(A, B) // 加密</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to B.length // 正向加密</span><br><span class="line">        <span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">            A[j] = A[j] ^ B[i] // 异或运算</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">XOR_DECRYPTION(A, B) // 解密</span><br><span class="line">	<span class="keyword">for</span> i = B.length to <span class="number">1</span> // 反向解密</span><br><span class="line">		<span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">			A[j] = A[j] ^ B[i] // 异或运算</span><br></pre></td></tr></table></figure>
+<h3 id="伪代码">伪代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">XOR_ENCRYPTION(A, B) // 加密</span><br><span class="line">    <span class="keyword">for</span> i = <span class="number">1</span> to B.length // 正向加密</span><br><span class="line">        <span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">            A[j] = A[j] ^ B[i] // 异或运算</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">XOR_DECRYPTION(A, B) // 解密</span><br><span class="line">	<span class="keyword">for</span> i = B.length to <span class="number">1</span> // 反向解密</span><br><span class="line">		<span class="keyword">for</span> j = <span class="number">1</span> to A.length</span><br><span class="line">			A[j] = A[j] ^ B[i] // 异或运算</span><br></pre></td></tr></table></figure>
 
       
     </div>

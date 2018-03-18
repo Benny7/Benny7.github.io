@@ -3,33 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>数据类型和数据结构 | Benny Wong</title>
+  <title>数据，数据元素，数据结构 | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据类型（data type）：强调数据的类型定义，即数据的存储和使用方式
-
-原子数据类型（低层次抽象）：即需要关注数据的逻辑特征，也需要关注数据的物理特征
-抽象数据类型（高层次抽象）：只需要关注数据的逻辑特征，不需要关注数据的物理特征
-
-数据结构（data structure）：强调数据的结构，即数据的存储和组织方式，数据结构即需要关注数据的逻辑结构，也需要关注数据的物理结构">
+  <meta name="description" content="数据数据（data）是对客观事物的量化，是计算机识别，存储和处理的对象信息（information）经过收集和处理后的数据数据和信息关系：数据是信息的载体，信息是数据的含义
+数据元素数据元素（data element）是数据的基本单位，由数据项组成，数据项是具有独立含义的最小标识单位
+数据结构数据结构（data structure）是计算机存储和组织数据的方式，具体指同一类数据元素中，各元素之间的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据类型和数据结构">
-<meta property="og:url" content="http://gotobenny.com/2018/02/25/2018-02-25-data-type-and-structure/index.html">
+<meta property="og:title" content="数据，数据元素，数据结构">
+<meta property="og:url" content="http://gotobenny.com/2018/02/25/2018-02-25-data-element-structure/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="数据类型（data type）：强调数据的类型定义，即数据的存储和使用方式
-
-原子数据类型（低层次抽象）：即需要关注数据的逻辑特征，也需要关注数据的物理特征
-抽象数据类型（高层次抽象）：只需要关注数据的逻辑特征，不需要关注数据的物理特征
-
-数据结构（data structure）：强调数据的结构，即数据的存储和组织方式，数据结构即需要关注数据的逻辑结构，也需要关注数据的物理结构">
-<meta property="og:updated_time" content="2018-02-25T16:19:10.701Z">
+<meta property="og:description" content="数据数据（data）是对客观事物的量化，是计算机识别，存储和处理的对象信息（information）经过收集和处理后的数据数据和信息关系：数据是信息的载体，信息是数据的含义
+数据元素数据元素（data element）是数据的基本单位，由数据项组成，数据项是具有独立含义的最小标识单位
+数据结构数据结构（data structure）是计算机存储和组织数据的方式，具体指同一类数据元素中，各元素之间的">
+<meta property="og:image" content="http://gotobenny.com/images/2018-02-25/data_structure.png">
+<meta property="og:updated_time" content="2018-03-18T06:05:22.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据类型和数据结构">
-<meta name="twitter:description" content="数据类型（data type）：强调数据的类型定义，即数据的存储和使用方式
-
-原子数据类型（低层次抽象）：即需要关注数据的逻辑特征，也需要关注数据的物理特征
-抽象数据类型（高层次抽象）：只需要关注数据的逻辑特征，不需要关注数据的物理特征
-
-数据结构（data structure）：强调数据的结构，即数据的存储和组织方式，数据结构即需要关注数据的逻辑结构，也需要关注数据的物理结构">
+<meta name="twitter:title" content="数据，数据元素，数据结构">
+<meta name="twitter:description" content="数据数据（data）是对客观事物的量化，是计算机识别，存储和处理的对象信息（information）经过收集和处理后的数据数据和信息关系：数据是信息的载体，信息是数据的含义
+数据元素数据元素（data element）是数据的基本单位，由数据项组成，数据项是具有独立含义的最小标识单位
+数据结构数据结构（data structure）是计算机存储和组织数据的方式，具体指同一类数据元素中，各元素之间的">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -192,11 +184,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-2018-02-25-data-type-and-structure" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-02-25-data-element-structure" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/02/25/2018-02-25-data-type-and-structure/" class="article-date">
-  	<time datetime="2018-02-25T15:41:00.000Z" itemprop="datePublished">2018-02-25</time>
+      <a href="/2018/02/25/2018-02-25-data-element-structure/" class="article-date">
+  	<time datetime="2018-02-25T15:46:00.000Z" itemprop="datePublished">2018-02-25</time>
 </a>
     </div>
   
@@ -209,7 +201,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      数据类型和数据结构
+      数据，数据元素，数据结构
     </h1>
   
 
@@ -233,12 +225,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>数据类型</strong>（data type）：强调数据的类型定义，即数据的存储和使用方式</p>
+        <h3 id="数据">数据</h3><p><strong>数据</strong>（data）是对客观事物的量化，是计算机识别，存储和处理的对象<br><strong>信息</strong>（information）经过收集和处理后的数据<br>数据和信息关系：数据是信息的载体，信息是数据的含义</p>
+<h3 id="数据元素">数据元素</h3><p><strong>数据元素</strong>（data element）是数据的基本单位，由数据项组成，数据项是具有独立含义的最小标识单位</p>
+<h3 id="数据结构">数据结构</h3><p><strong>数据结构</strong>（data structure）是计算机存储和组织数据的方式，具体指同一类数据元素中，各元素之间的相互关系，包括三个组成成分，即数据的逻辑结构，数据的存储结构和数据的运算<br><img src="/images/2018-02-25/data_structure.png" alt="数据结构"></p>
+<h3 id="逻辑结构">逻辑结构</h3><p><strong>逻辑结构</strong>（logic structure）是指数据元素之间的逻辑关系，独立于数据在计算机的存储方式，数据的逻辑结构可以看作是从具体问题抽象出来的数学模型</p>
 <ul>
-<li><strong>原子数据类型</strong>（低层次抽象）：即需要关注数据的逻辑特征，也需要关注数据的物理特征</li>
-<li><strong>抽象数据类型</strong>（高层次抽象）：只需要关注数据的逻辑特征，不需要关注数据的物理特征</li>
+<li>线性结构 ：即数据元素之间是线性关系，除了首尾节点，每个只有一个前驱节点和后继节点</li>
+<li>非线性结构 ：即数据元素之间是非线性关系</li>
 </ul>
-<p><strong>数据结构</strong>（data structure）：强调数据的结构，即数据的存储和组织方式，数据结构即需要关注数据的逻辑结构，也需要关注数据的物理结构</p>
+<h3 id="存储结构">存储结构</h3><p><strong>存储结构</strong>（physical structure）是数据元素之间的存储关系，依赖于数据在计算机的存储方式</p>
+<ul>
+<li>顺序存储结构：在计算机中用一组连续的存储单元依次数据元素（优点：随机存储，查找速度快，缺点：增删需要移动数据元素）</li>
+<li>链式存储结构：在计算机中用一组任意的存储单元存储数据元素，通过指针表示数据元素之间的逻辑关系（优点：增删灵活，缺点：存储空间需求大，查找慢）</li>
+<li>索引存储结构：在链式存储的基础上，通过附加的索引表标识数据元素存储地址（优点：查找速度快，缺点：占用更多存储空间）</li>
+<li>散列存储结构：通过散列技术保证查找速度的同时压缩存储空间，通过数据元素的散列值决定存储地址</li>
+</ul>
+<h3 id="运算">运算</h3><p><strong>数据的运算</strong>是定义在数据的逻辑结构上的运算集合，比如增删改查。这些运算都是抽象的操作，只有确定了存储结构才能确定具体的操作</p>
 
       
     </div>
@@ -248,18 +250,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/02/25/2018-02-25-data-element-structure/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          数据，数据元素，数据结构
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/24/2017-09-24-binary-search/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二分查找（binary search）</div>
+    <a href="/2018/02/25/2018-02-25-data-type-and-structure/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据类型和数据结构</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -293,7 +286,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2018-02-25-data-type-and-structure" data-title="数据类型和数据结构" data-url="http://gotobenny.com/2018/02/25/2018-02-25-data-type-and-structure/"></div>
+	<div class="ds-thread" data-thread-key="2018-02-25-data-element-structure" data-title="数据，数据元素，数据结构" data-url="http://gotobenny.com/2018/02/25/2018-02-25-data-element-structure/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

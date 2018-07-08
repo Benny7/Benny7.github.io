@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Benny Wong</title>
+  <title>矩阵 | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="gotobenny.com个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Benny Wong">
-<meta property="og:url" content="http://gotobenny.com/README.html">
+  <meta name="description" content="矩阵加法$$ A + B = B + A $$$$ (A + B) +C = A + (B + C) $$
+矩阵数乘$$ (\lambda \mu)A = \lambda(\mu A) $$$$ (\lambda + \mu)A = \lambda A + \mu A $$$$ \lambda(A + B) = \lambda A + \lambda B $$
+线性运算 = 加减 + 数乘
+矩阵转">
+<meta property="og:type" content="article">
+<meta property="og:title" content="矩阵">
+<meta property="og:url" content="http://gotobenny.com/2018/06/25/2018-06-25-math-matrix/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="gotobenny.com个人博客">
-<meta property="og:updated_time" content="2015-03-13T18:41:52.000Z">
+<meta property="og:description" content="矩阵加法$$ A + B = B + A $$$$ (A + B) +C = A + (B + C) $$
+矩阵数乘$$ (\lambda \mu)A = \lambda(\mu A) $$$$ (\lambda + \mu)A = \lambda A + \mu A $$$$ \lambda(A + B) = \lambda A + \lambda B $$
+线性运算 = 加减 + 数乘
+矩阵转">
+<meta property="og:updated_time" content="2018-06-28T15:44:53.337Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Benny Wong">
-<meta name="twitter:description" content="gotobenny.com个人博客">
+<meta name="twitter:title" content="矩阵">
+<meta name="twitter:description" content="矩阵加法$$ A + B = B + A $$$$ (A + B) +C = A + (B + C) $$
+矩阵数乘$$ (\lambda \mu)A = \lambda(\mu A) $$$$ (\lambda + \mu)A = \lambda A + \mu A $$$$ \lambda(A + B) = \lambda A + \lambda B $$
+线性运算 = 加减 + 数乘
+矩阵转">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -177,11 +186,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-06-25-math-matrix" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/README.html" class="article-date">
-  	<time datetime="2017-08-20T16:14:18.000Z" itemprop="datePublished">2017-08-21</time>
+      <a href="/2018/06/25/2018-06-25-math-matrix/" class="article-date">
+  	<time datetime="2018-06-25T04:20:00.000Z" itemprop="datePublished">2018-06-25</time>
 </a>
     </div>
   
@@ -190,15 +199,70 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      矩阵
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Base/">Base</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="gotobenny-com"><a href="http://gotobenny.com">gotobenny.com</a></h1><h2 id="个人博客">个人博客</h2>
+        <h3 id="矩阵加法">矩阵加法</h3><p>$$ A + B = B + A $$<br>$$ (A + B) +C = A + (B + C) $$</p>
+<h3 id="矩阵数乘">矩阵数乘</h3><p>$$ (\lambda \mu)A = \lambda(\mu A) $$<br>$$ (\lambda + \mu)A = \lambda A + \mu A $$<br>$$ \lambda(A + B) = \lambda A + \lambda B $$</p>
+<p>线性运算 = 加减 + 数乘</p>
+<h3 id="矩阵转置">矩阵转置</h3><p>$$ (A^T )^T = A $$<br>$$ (\lambda A)^T = \lambda A^T $$<br>$$ (AB)^T = B^T A^T $$</p>
+<h3 id="矩阵运算律">矩阵运算律</h3><p>结合律： $$ (AB)C = A(BC) $$<br>分配律： $$ (A + B)C = AC + BC $$<br>        $$ C(A + B) = CA + CB $$<br>矩阵乘法不满足交换律</p>
+<h3 id="矩阵加减运算">矩阵加减运算</h3><p>$$<br>\begin{bmatrix}<br>{a_1}&amp;{a_2}\\<br>{a_3}&amp;{a_4}\\<br>\end{bmatrix}<br>\pm<br>\begin{bmatrix}<br>{b_1}&amp;{b_2}\\<br>{b_3}&amp;{b_4}\\<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>{a_1 \pm b_1}&amp;{a_2 \pm b_2}\\<br>{a_3 \pm b_3}&amp;{a_4 \pm b_4}\\<br>\end{bmatrix}<br>$$</p>
+<h3 id="矩阵乘法运算">矩阵乘法运算</h3><p>$$<br>\begin{bmatrix}<br>{a_1}&amp;{a_2}\\<br>{a_3}&amp;{a_4}\\<br>\end{bmatrix}<br>*<br>\begin{bmatrix}<br>{b_1}&amp;{b_2}\\<br>{b_3}&amp;{b_4}\\<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>{a_1b_1 + a_2b_3}&amp;{a_1b_2 + a_2b_4}\\<br>{a_3b_1 + a_4b_3}&amp;{a_3b_2 + a_4b_4}\\<br>\end{bmatrix}<br>$$</p>
+<h3 id="矩阵数乘运算">矩阵数乘运算</h3><p>$$<br>\lambda<br>\begin{bmatrix}<br>{a_1}&amp;{a_2}\\<br>{a_3}&amp;{a_4}\\<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>{\lambda a_1}&amp;{\lambda a_2}\\<br>{\lambda a_3}&amp;{\lambda a_4}\\<br>\end{bmatrix}<br>$$</p>
+<h3 id="矩阵转置-1">矩阵转置</h3><p>$$<br>\begin{bmatrix}<br>{a_1}&amp;{a_2}\\<br>{a_3}&amp;{a_4}\\<br>\end{bmatrix}^T<br>=<br>\begin{bmatrix}<br>{a_1}&amp;{a_3}\\<br>{a_2}&amp;{a_4}\\<br>\end{bmatrix}<br>$$</p>
+<h3 id="矩阵共轭运算">矩阵共轭运算</h3><p>$$<br>\overline{<br>\begin{bmatrix}<br>{a_1 + b_1i}&amp;{a_2 + b_2i}\\<br>{a_3 + b_3i}&amp;{a_4 + b_4i}\\<br>\end{bmatrix}<br>}<br>=<br>\begin{bmatrix}<br>{a_1 - b_1i}&amp;{a_2 - b_2i}\\<br>{a_3 - b_3i}&amp;{a_4 - b_4i}\\<br>\end{bmatrix}<br>$$</p>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2018/06/25/2018-06-25-math-trigonometric-function/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          三角函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/25/2018-06-25-math-vector/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">向量</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -227,7 +291,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://gotobenny.com/README.html"></div>
+	<div class="ds-thread" data-thread-key="2018-06-25-math-matrix" data-title="矩阵" data-url="http://gotobenny.com/2018/06/25/2018-06-25-math-matrix/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

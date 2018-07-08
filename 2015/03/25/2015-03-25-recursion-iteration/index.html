@@ -15,7 +15,7 @@
 递归和迭代的区别：递归是一个树结构，从字面可以其理解为重复“递推”和“回归”的过程，当“递推”到达底部时就会开始“回归”，其过程相当于树的深度优先遍">
 <meta property="og:image" content="http://gotobenny.com/images/2015-03-25/recursion-iteration.png">
 <meta property="og:image" content="http://gotobenny.com/images/2015-03-25/tail-recursion.png">
-<meta property="og:updated_time" content="2015-03-22T16:48:06.000Z">
+<meta property="og:updated_time" content="2018-07-05T00:20:03.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="递归和迭代">
 <meta name="twitter:description" content="递归（recursion）：递归常被用来描述以自相似方法重复事物的过程，在数学和计算机科学中，指的是在函数定义中使用函数自身的方法。（A调用A）迭代（iteration）：重复反馈过程的活动，每一次迭代的结果会作为下一次迭代的初始值。（A重复调用B）
@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 15px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
+						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 16.67px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 13.33px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
 					</div>
 				</section>
 				
@@ -228,7 +228,7 @@
 <p>迭代是一个<strong>环结构</strong>，从初始状态开始，每次迭代都遍历这个环，并更新状态，多次迭代直到到达结束状态。</p>
 <p>理论上递归和迭代时间复杂度方面是一样的，但实际应用中（函数调用和函数调用堆栈的开销）递归比迭代效率要低。</p>
 <p><img src="/images/2015-03-25/recursion-iteration.png" alt="递归和迭代"></p>
-<h3 id="递归转迭代">递归转迭代</h3><p>理论上递归和迭代可以相互转换，但实际从算法结构来说，递归声明的结构并不总能转换为迭代结构（原因在于结构的引申本身属于递归的概念，用迭代的方法在设计初期根本无法实现）。迭代可以转换为递归，但递归不一定能转换为迭代。</p>
+<h3 id="递归转迭代">递归转迭代</h3><p>理论上递归和迭代可以相互转换，但实际从算法结构来说，递归声明的结构并不总能转换为迭代结构（原因有待研究）。迭代可以转换为递归，但递归不一定能转换为迭代。</p>
 <p>将递归算法转换为非递归算法有两种方法，一种是直接求值（迭代），不需要回溯；另一种是不能直接求值，需要回溯。前者使用一些变量保存中间结果，称为直接转换法，后者使用栈保存中间结果，称为间接转换法。</p>
 <ul>
 <li><p><strong>直接转换法</strong><br>直接转换法通常用来消除<strong>尾递归</strong>（tail recursion）和<strong>单向递归</strong>，将递归结构用迭代结构来替代。（单向递归 → 尾递归 → 迭代）</p>

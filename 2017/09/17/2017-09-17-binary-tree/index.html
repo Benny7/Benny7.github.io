@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://gotobenny.com/images/2017-09-17/full.png">
 <meta property="og:image" content="http://gotobenny.com/images/2017-09-17/complete.png">
 <meta property="og:image" content="http://gotobenny.com/images/2017-09-17/perfect.png">
-<meta property="og:updated_time" content="2018-03-21T16:35:33.102Z">
+<meta property="og:updated_time" content="2018-06-16T04:33:18.056Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树（binary tree）">
 <meta name="twitter:description" content="二叉树是一种度最大为2的树，即每个节点最多只有两个子节点（左孩子，右孩子）的树
@@ -132,7 +132,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 15px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
+						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 16.67px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 13.33px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
 					</div>
 				</section>
 				
@@ -248,6 +248,13 @@
 <h3 id="完全二叉树（complete_binary_tree）">完全二叉树（complete binary tree）</h3><p><strong>完全二叉树</strong>是指除了最后一层可以缺少右边节点，其它层达到最大节点的二叉树（总共有$2^{k-1}$到$2^k-1$个节点，其中k为深度）<br><img src="/images/2017-09-17/complete.png" alt="完全二叉树"></p>
 <h3 id="完美二叉树（perfect_binary_tree）">完美二叉树（perfect binary tree）</h3><p><strong>完美二叉树</strong>指每一层都达到最大节点的二叉树（总共有$2^k-1$个节点，其中k为深度）<br><img src="/images/2017-09-17/perfect.png" alt="完美二叉树"></p>
 <h3 id="存储特点">存储特点</h3><p>完全二叉树和完美二叉树可以按顺序给每一个节点编号，所以相对于链式存储，顺序存储更适合完全二叉树和完美二叉树</p>
+<h3 id="二叉树的遍历">二叉树的遍历</h3><ol>
+<li>前序遍历：根在前（DLR）</li>
+<li>中序遍历：根在中（LDR）</li>
+<li>后序遍历：根在后（LRD）</li>
+<li>层次遍历：按层遍历（DLR）</li>
+</ol>
+<p>D = Degree（根节点）<br>L = Left（左节点）<br>R = Right（右节点）</p>
 
       
     </div>

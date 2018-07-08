@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Benny Wong</title>
+  <title>向量 | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="gotobenny.com个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Benny Wong">
-<meta property="og:url" content="http://gotobenny.com/README.html">
+  <meta name="description" content="向量运算
+点乘：也叫数量积。结果是一个向量在另一个向量方向上投影的长度，是一个标量。
+叉乘：也叫向量积。结果是一个和已有两个向量都垂直的向量。
+
+点乘运算$$ \vec i \cdot \vec i = \vec j \cdot \vec j = \vec k \cdot \vec k = 1 $$$$ \vec i \cdot \vec j = \vec j \cdot \vec k = \ve">
+<meta property="og:type" content="article">
+<meta property="og:title" content="向量">
+<meta property="og:url" content="http://gotobenny.com/2018/06/25/2018-06-25-math-vector/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="gotobenny.com个人博客">
-<meta property="og:updated_time" content="2015-03-13T18:41:52.000Z">
+<meta property="og:description" content="向量运算
+点乘：也叫数量积。结果是一个向量在另一个向量方向上投影的长度，是一个标量。
+叉乘：也叫向量积。结果是一个和已有两个向量都垂直的向量。
+
+点乘运算$$ \vec i \cdot \vec i = \vec j \cdot \vec j = \vec k \cdot \vec k = 1 $$$$ \vec i \cdot \vec j = \vec j \cdot \vec k = \ve">
+<meta property="og:updated_time" content="2018-07-05T02:15:22.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Benny Wong">
-<meta name="twitter:description" content="gotobenny.com个人博客">
+<meta name="twitter:title" content="向量">
+<meta name="twitter:description" content="向量运算
+点乘：也叫数量积。结果是一个向量在另一个向量方向上投影的长度，是一个标量。
+叉乘：也叫向量积。结果是一个和已有两个向量都垂直的向量。
+
+点乘运算$$ \vec i \cdot \vec i = \vec j \cdot \vec j = \vec k \cdot \vec k = 1 $$$$ \vec i \cdot \vec j = \vec j \cdot \vec k = \ve">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -177,11 +189,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-06-25-math-vector" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/README.html" class="article-date">
-  	<time datetime="2017-08-20T16:14:18.000Z" itemprop="datePublished">2017-08-21</time>
+      <a href="/2018/06/25/2018-06-25-math-vector/" class="article-date">
+  	<time datetime="2018-06-25T02:20:00.000Z" itemprop="datePublished">2018-06-25</time>
 </a>
     </div>
   
@@ -190,15 +202,72 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      向量
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Base/">Base</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="gotobenny-com"><a href="http://gotobenny.com">gotobenny.com</a></h1><h2 id="个人博客">个人博客</h2>
+        <h3 id="向量运算">向量运算</h3><ul>
+<li>点乘：也叫数量积。结果是一个向量在另一个向量方向上投影的长度，是一个标量。</li>
+<li>叉乘：也叫向量积。结果是一个和已有两个向量都垂直的向量。</li>
+</ul>
+<h3 id="点乘运算">点乘运算</h3><p>$$ \vec i \cdot \vec i = \vec j \cdot \vec j = \vec k \cdot \vec k = 1 $$<br>$$ \vec i \cdot \vec j = \vec j \cdot \vec k = \vec k \cdot \vec i = 0 $$<br>$$ \vec j \cdot \vec i = \vec k \cdot \vec j = \vec i \cdot \vec k = 0 $$<br>$$ \begin{equation}\begin{split}<br>\vec a \cdot \vec b&amp;= (a_x \vec i + a_y \vec j + a_z \vec k) \cdot (b_x \vec i + b_y \vec j + b_z \vec k)\\<br>&amp;= a_xb_x \vec i \cdot \vec i + a_xb_y \vec i \cdot \vec j + a_xb_z \vec i \cdot \vec k\\<br>&amp;\quad + a_yb_x \vec j \cdot \vec i + a_yb_y \vec j \cdot \vec j + a_yb_z \vec j \cdot \vec k\\<br>&amp;\quad + a_zb_x \vec k \cdot \vec i + a_zb_y \vec k \cdot \vec j + a_zb_z \vec k \cdot \vec k\\<br>&amp;= a_xb_x + a_yb_y + a_zb_z<br>\end{split}\end{equation} $$</p>
+<p>$$ \vec a \cdot \vec b = \begin{vmatrix} \vec a \end{vmatrix} \begin{vmatrix} \vec b \end{vmatrix} \cos \theta = a_xb_x + a_yb_y + a_zb_z $$</p>
+<h3 id="点乘运算律">点乘运算律</h3><p>交换律：$$ \vec a \cdot \vec b = \vec b \cdot \vec a $$<br>分配律：$$ \vec a \cdot (\vec b + \vec c) = \vec a \cdot \vec b + \vec a \cdot \vec c $$<br>结合律：$$ (\lambda \vec a) \cdot \vec b =\lambda (\vec a \cdot \vec b) = \vec a \cdot (\lambda \vec b) $$</p>
+<h3 id="叉乘运算">叉乘运算</h3><p>$$ \vec i \times \vec i = \vec j \times \vec j = \vec k \times \vec k = 0 $$<br>$$ \vec i \times \vec j = \vec k \quad \vec j \times \vec k = \vec i \quad \vec k \times \vec i = j $$<br>$$ \vec j \times \vec i = -\vec k \quad \vec k \times \vec j = -\vec i \quad \vec i \times \vec k = -j $$<br>$$ \begin{equation}\begin{split}<br>\vec a \times \vec b &amp;= (a_x \vec i + a_y \vec j + a_z \vec k) \times (b_x \vec i + b_y \vec j + b_z \vec k)\\<br>&amp;= a_xb_x \vec i \times \vec i + a_xb_y \vec i \times \vec j + a_xb_z \vec i \times \vec k\\<br>&amp;\quad + a_yb_x \vec j \times \vec i + a_yb_y \vec j \times \vec j + a_yb_z \vec j \times \vec k\\<br>&amp;\quad + a_zb_x \vec k \times \vec i + a_zb_y \vec k \times \vec j + a_zb_z \vec k \times \vec k\\<br>&amp;= a_xb_y \vec k - a_xb_z \vec j - a_yb_x \vec k + a_yb_z \vec i + a_zb_x \vec j - a_zb_y \vec i\\<br>&amp;= (a_yb_z-a_zb_y) \vec i + (a_zb_x - a_xb_z) \vec j + (a_xb_y - a_yb_x) \vec k<br>\end{split}\end{equation} $$</p>
+<p>$$<br>\vec a \times \vec b =<br>\begin{bmatrix}<br>a_yb_z - a_zb_y\\<br>a_zb_x - a_xb_z\\<br>a_xb_y - a_yb_x\\<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>0&amp;-a_z&amp;a_y\\<br>a_z&amp;0&amp;-a_x\\<br>-a_y&amp;a_x&amp;0\\<br>\end{bmatrix}<br>\begin{bmatrix}<br>b_x\\<br>b_y\\<br>b_z\\<br>\end{bmatrix}<br>$$</p>
+<p>$$ \begin{equation}\begin{split}<br>{\begin{bmatrix} \vec a \end{bmatrix}}_\times  &amp;=<br>\begin{bmatrix}<br>0&amp;-a_z&amp;a_y\\<br>a_z&amp;0&amp;-a_x\\<br>-a_y&amp;a_x&amp;0\\<br>\end{bmatrix}\\<br>&amp;=a_x<br>\begin{bmatrix}<br>0&amp;0&amp;0\\<br>0&amp;0&amp;-1\\<br>0&amp;1&amp;0\\<br>\end{bmatrix}<br>+a_y<br>\begin{bmatrix}<br>0&amp;0&amp;1\\<br>0&amp;0&amp;0\\<br>-1&amp;0&amp;0\\<br>\end{bmatrix}<br>+a_z<br>\begin{bmatrix}<br>0&amp;-1&amp;0\\<br>1&amp;0&amp;0\\<br>0&amp;0&amp;0\\<br>\end{bmatrix}<br>\end{split}\end{equation} $$</p>
+<p>$ {\begin{bmatrix} \vec a \end{bmatrix}}_\times $为叉乘矩阵</p>
+<p>$$ \begin{vmatrix} \vec a \times \vec b \end{vmatrix} = \begin{vmatrix} \vec a \end{vmatrix} \begin{vmatrix} \vec b \end{vmatrix} \sin \theta $$</p>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2018/06/25/2018-06-25-math-matrix/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          矩阵
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/20/2018-06-20-binary-search-tree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉搜索树（binary search tree）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -227,7 +296,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://gotobenny.com/README.html"></div>
+	<div class="ds-thread" data-thread-key="2018-06-25-math-vector" data-title="向量" data-url="http://gotobenny.com/2018/06/25/2018-06-25-math-vector/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

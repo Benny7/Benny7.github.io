@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>齐次坐标 | Benny Wong</title>
+  <title>数列 | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近看游戏引擎的书，经常会触及齐次坐标（homogeneous coordinates）这个概念，但往往总是对此一笔带过，搞得我总是一知半解，以前学线性代数时应该也接触过这个概念，不过现在对其中的细节已经淡忘了。
-要了解齐次坐标必须先了解仿射变换（affine transformation）和线性变换（linear transformation）。所谓线性变换，是指两个向量之间的转换，其保持了向量">
+  <meta name="description" content="等差数列$$ a_n = a_1 + (n - 1)d $$$$ S_n = {n(a_1 + a_n) \over 2} $$
+等比数列$$ a_n = a_1q^{n-1} $$$$ S_n = {a_1(1 - q^n) \over 1-q} $$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="齐次坐标">
-<meta property="og:url" content="http://gotobenny.com/2015/02/19/2015-02-19-homogeneous-coordinates/index.html">
+<meta property="og:title" content="数列">
+<meta property="og:url" content="http://gotobenny.com/2018/06/25/2018-06-25-math-sequence-of-number/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description" content="最近看游戏引擎的书，经常会触及齐次坐标（homogeneous coordinates）这个概念，但往往总是对此一笔带过，搞得我总是一知半解，以前学线性代数时应该也接触过这个概念，不过现在对其中的细节已经淡忘了。
-要了解齐次坐标必须先了解仿射变换（affine transformation）和线性变换（linear transformation）。所谓线性变换，是指两个向量之间的转换，其保持了向量">
-<meta property="og:updated_time" content="2015-03-15T18:04:00.000Z">
+<meta property="og:description" content="等差数列$$ a_n = a_1 + (n - 1)d $$$$ S_n = {n(a_1 + a_n) \over 2} $$
+等比数列$$ a_n = a_1q^{n-1} $$$$ S_n = {a_1(1 - q^n) \over 1-q} $$">
+<meta property="og:updated_time" content="2018-06-25T16:11:33.366Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="齐次坐标">
-<meta name="twitter:description" content="最近看游戏引擎的书，经常会触及齐次坐标（homogeneous coordinates）这个概念，但往往总是对此一笔带过，搞得我总是一知半解，以前学线性代数时应该也接触过这个概念，不过现在对其中的细节已经淡忘了。
-要了解齐次坐标必须先了解仿射变换（affine transformation）和线性变换（linear transformation）。所谓线性变换，是指两个向量之间的转换，其保持了向量">
+<meta name="twitter:title" content="数列">
+<meta name="twitter:description" content="等差数列$$ a_n = a_1 + (n - 1)d $$$$ S_n = {n(a_1 + a_n) \over 2} $$
+等比数列$$ a_n = a_1q^{n-1} $$$$ S_n = {a_1(1 - q^n) \over 1-q} $$">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 15px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
+						<a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Base/" style="font-size: 10px;">Base</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/Data-Structures/" style="font-size: 16.67px;">Data Structures</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/Math/" style="font-size: 13.33px;">Math</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/tags/STL/" style="font-size: 10px;">STL</a>
 					</div>
 				</section>
 				
@@ -180,11 +180,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-2015-02-19-homogeneous-coordinates" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-06-25-math-sequence-of-number" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/02/19/2015-02-19-homogeneous-coordinates/" class="article-date">
-  	<time datetime="2015-02-19T07:00:00.000Z" itemprop="datePublished">2015-02-19</time>
+      <a href="/2018/06/25/2018-06-25-math-sequence-of-number/" class="article-date">
+  	<time datetime="2018-06-25T06:20:00.000Z" itemprop="datePublished">2018-06-25</time>
 </a>
     </div>
   
@@ -197,7 +197,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      齐次坐标
+      数列
     </h1>
   
 
@@ -221,15 +221,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近看游戏引擎的书，经常会触及<strong>齐次坐标</strong>（homogeneous coordinates）这个概念，但往往总是对此一笔带过，搞得我总是一知半解，以前学线性代数时应该也接触过这个概念，不过现在对其中的细节已经淡忘了。</p>
-<p>要了解齐次坐标必须先了解<strong>仿射变换</strong>（affine transformation）和<strong>线性变换</strong>（linear transformation）。所谓线性变换，是指两个向量之间的转换，其保持了向量加法和向量乘法的运算。</p>
-<p>简而言之，线性变换必须满足下面两个条件：<br>可加性：$f(v_a + v_b) = f(v_a) + f(v_b)$<br>齐次性：$f(kv) = kf(v)$<br>而平移变换（$f(v) = v + t$）不满足上述条件，所以平移变换不是线性变换。</p>
-<p>正因为线性变换不能表示平移变换，所以引入了仿射空间和仿射变换（具体描述见<a href="http://www.fuzihao.org/blog/2014/10/23/%E4%BB%BF%E5%B0%84%E7%A9%BA%E9%97%B4%E4%B8%8E%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" target="_blank" rel="external">仿射空间与仿射变换</a>），仿射空间简言之就是没有原点的向量空间，因为没有原点，所以定义了一个仿射组合来消除原点的影响。<br>通过仿射组合我们可以将仿射变换表示为线性变换和平移变换的叠加形式：<br>$$y = Ax + b$$</p>
-<p>齐次坐标其实就是将n维的向量用n+1维来表示，这种表示方法使得平移变换可以通过矩阵来表示，上面的仿射变换可以用齐次坐标表示为：<br>$$<br>\begin{bmatrix}y\\1\end{bmatrix} = \begin{bmatrix}A&amp;b\\0&amp;1\end{bmatrix}\cdot\begin{bmatrix}x\\1\end{bmatrix}<br>$$</p>
-<p>考虑当第n+1维为0时：</p>
-<p>$$<br>\begin{bmatrix}y\\0\end{bmatrix} = \begin{bmatrix}A&amp;b\\0&amp;1\end{bmatrix}\cdot\begin{bmatrix}x\\0\end{bmatrix}<br>$$</p>
-<p>上式相当于线性变换：<br>$$y = Ax$$<br>所以齐次坐标的第n+1维的取值决定了是否进行平移变换，借此可以用来区分点和向量的变换。</p>
-<p>最后还有一个问题：齐次坐标的齐次究竟是什么意思？我想了很久也想不通其中的深意。</p>
+        <h3 id="等差数列">等差数列</h3><p>$$ a_n = a_1 + (n - 1)d $$<br>$$ S_n = {n(a_1 + a_n) \over 2} $$</p>
+<h3 id="等比数列">等比数列</h3><p>$$ a_n = a_1q^{n-1} $$<br>$$ S_n = {a_1(1 - q^n) \over 1-q} $$</p>
 
       
     </div>
@@ -239,15 +232,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/10/2015-03-10-insertion sort/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          插入排序（insertion sort）
-        
-      </div>
-    </a>
   
+    <a href="/2018/06/25/2018-06-25-math-trigonometric-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三角函数</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -279,7 +268,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015-02-19-homogeneous-coordinates" data-title="齐次坐标" data-url="http://gotobenny.com/2015/02/19/2015-02-19-homogeneous-coordinates/"></div>
+	<div class="ds-thread" data-thread-key="2018-06-25-math-sequence-of-number" data-title="数列" data-url="http://gotobenny.com/2018/06/25/2018-06-25-math-sequence-of-number/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

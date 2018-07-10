@@ -17,7 +17,7 @@
 散列（hash）的原意是随机混杂和拼凑，在计算机科学中是一种极其有效和实用的技术，此技术通过散列函数，将任意长度的输入，转换为固定">
 <meta property="og:image" content="http://gotobenny.com/images/2015-04-18/direct-address-table.png">
 <meta property="og:image" content="http://gotobenny.com/images/2015-04-18/hash-table.png">
-<meta property="og:updated_time" content="2017-08-21T15:06:11.000Z">
+<meta property="og:updated_time" content="2018-07-10T13:46:00.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="散列表（hash table）">
 <meta name="twitter:description" content="直接寻址表直接寻址表（direct-address table）是对普通数组概念的推广，直接通过key访问表中的元素，当key的全域U比较小时，直接寻址是一种简单而有效的技术。
@@ -102,15 +102,7 @@
 							
 								<a class="github" target="_blank" href="https://github.com/Benny7" title="github">github</a>
 					        
-								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/benny_wong" title="zhihu">zhihu</a>
-					        
 								<a class="douban" target="_blank" href="http://www.douban.com/people/benny-huang/" title="douban">douban</a>
-					        
-								<a class="mail" target="_blank" href="/gotobenny7@gmail.com" title="mail">mail</a>
-					        
-								<a class="facebook" target="_blank" href="https://www.facebook.com/bennywonghome" title="facebook">facebook</a>
-					        
-								<a class="twitter" target="_blank" href="https://twitter.com/BennyWong_7" title="twitter">twitter</a>
 					        
 						</div>
 					</nav>
@@ -170,15 +162,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Benny7" title="github">github</a>
 			        
-						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/benny_wong" title="zhihu">zhihu</a>
-			        
 						<a class="douban" target="_blank" href="http://www.douban.com/people/benny-huang/" title="douban">douban</a>
-			        
-						<a class="mail" target="_blank" href="/gotobenny7@gmail.com" title="mail">mail</a>
-			        
-						<a class="facebook" target="_blank" href="https://www.facebook.com/bennywonghome" title="facebook">facebook</a>
-			        
-						<a class="twitter" target="_blank" href="https://twitter.com/BennyWong_7" title="twitter">twitter</a>
 			        
 				</div>
 			</nav>
@@ -239,17 +223,23 @@
 <h3 id="链接法">链接法</h3><p>在链接法中，散列到同一个slot上的元素都存储到一个链表中，并将链表表头存储到slot中<br><img src="/images/2015-04-18/hash-table.png" alt="散列表"></p>
 <h3 id="开放寻址法">开放寻址法</h3><p>在开放寻址法中，所有的元素都存储在散列表里，每个表项要么为NIL要么包含动态集合的一个元素，当查找某元素时，会探查所有表项，直到找到目标元素或最终查明目标元素不在表中。在开放寻址法中，散列表可能会被填满。</p>
 <p><strong>探查序列</strong>（probe sequence）：$(\ h(k,0),h(k, 1),…,h(k, m-1)\ )$，即$(\ 0,1,…,m-1\ )$的一个排列。</p>
-<p>有三种技术常用来技术开放寻址法中的探查序列：<strong>线性探查</strong>（linear probing），<strong>二次探查</strong>（quadratic probing）和<strong>双重探查</strong>（double probing）</p>
-<ul>
-<li><p>线性探查<br>散列函数：$h(k,i) = (h_1(k) + i)\ mod\ m, i = 0, 1, …, m-1$<br>线性探查会首先探查槽$T[h_1(k)]$，接着探查槽$T[h_1(k) + 1]$，直到到达槽$T[h_1(k) - 1]$，故线性探查只有$m$种探查序列。线性探查存在一个称之为一次群集（primary clustering）的问题，即随着连续被占用的槽不断增加，平均查找时间会随之增加。</p>
-</li>
-<li><p>二次探查<br>散列函数：$h(k,i) = (h_1(k) + c_1 i + c_2 i^2)\ mod\ m, i = 0, 1, …, m-1$<br>二次探查会首先探查槽$T[h_1(k)]$,之后的探查位置会增加一个偏移量，该偏移量以二次的方式依赖于探查号$i$，这种探查的效果比线性探查要好得多，二次探查同样只有$m$种探查序列。</p>
-</li>
-<li><p>双重探查<br>散列函数：$h(k,i) = (h_1(k) + i h_2(k))\ mod\ m, i = 0, 1, …, m-1$<br>其中$h_1(k) = k\ mod\ m, h_2(k) = 1 + (k\ mod\ m_0), m_0略小于m$<br>双重散列是用于开放寻址法的最好方法之一，双重散列有$m^2$种探查序列，其性能非常接近理想的均匀散列的性能</p>
-</li>
-</ul>
-<h3 id="完全散列">完全散列</h3><p>待续</p>
+<!-- 有三种技术常用来技术开放寻址法中的探查序列：**线性探查**（linear probing），**二次探查**（quadratic probing）和**双重探查**（double probing）
 
+- 线性探查
+散列函数：$h(k,i) = (h_1(k) + i)\ mod\ m, i = 0, 1, ..., m-1$
+线性探查会首先探查槽$T[h_1(k)]$，接着探查槽$T[h_1(k) + 1]$，直到到达槽$T[h_1(k) - 1]$，故线性探查只有$m$种探查序列。线性探查存在一个称之为一次群集（primary clustering）的问题，即随着连续被占用的槽不断增加，平均查找时间会随之增加。
+
+- 二次探查
+散列函数：$h(k,i) = (h_1(k) + c_1 i + c_2 i^2)\ mod\ m, i = 0, 1, ..., m-1$
+二次探查会首先探查槽$T[h_1(k)]$,之后的探查位置会增加一个偏移量，该偏移量以二次的方式依赖于探查号$i$，这种探查的效果比线性探查要好得多，二次探查同样只有$m$种探查序列。
+
+- 双重探查
+散列函数：$h(k,i) = (h_1(k) + i h_2(k))\ mod\ m, i = 0, 1, ..., m-1$
+其中$h_1(k) = k\ mod\ m, h_2(k) = 1 + (k\ mod\ m_0), m_0略小于m$
+双重散列是用于开放寻址法的最好方法之一，双重散列有$m^2$种探查序列，其性能非常接近理想的均匀散列的性能
+
+###完全散列
+待续 -->
       
     </div>
     

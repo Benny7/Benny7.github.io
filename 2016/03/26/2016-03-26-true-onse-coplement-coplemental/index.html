@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Lua | Benny Wong</title>
+  <title>原码，反码，补码 | Benny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Benny Wong">
-<meta property="og:url" content="http://gotobenny.com/tags/Lua/index.html">
+  <meta name="description" content="原码（true code）原码 = 符号位 + 真值绝对值
+反码（onse complement code）正数：反码 = 原码负数：反码 = 原码取反（符号位不变）
+补码（complemental code）正数：补码 = 原码负数：补码 = 反码 + 1
+原码反码补码的作用解决减法运算，CPU只有加法器。
+补码能用于加法的原因假设$x$是真值绝对值，考虑到计算机加法会溢出，有$$ x_f +">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原码，反码，补码">
+<meta property="og:url" content="http://gotobenny.com/2016/03/26/2016-03-26-true-onse-coplement-coplemental/index.html">
 <meta property="og:site_name" content="Benny Wong">
-<meta property="og:description">
+<meta property="og:description" content="原码（true code）原码 = 符号位 + 真值绝对值
+反码（onse complement code）正数：反码 = 原码负数：反码 = 原码取反（符号位不变）
+补码（complemental code）正数：补码 = 原码负数：补码 = 反码 + 1
+原码反码补码的作用解决减法运算，CPU只有加法器。
+补码能用于加法的原因假设$x$是真值绝对值，考虑到计算机加法会溢出，有$$ x_f +">
+<meta property="og:updated_time" content="2018-07-12T16:25:52.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Benny Wong">
-<meta name="twitter:description">
+<meta name="twitter:title" content="原码，反码，补码">
+<meta name="twitter:description" content="原码（true code）原码 = 符号位 + 真值绝对值
+反码（onse complement code）正数：反码 = 原码负数：反码 = 原码取反（符号位不变）
+补码（complemental code）正数：补码 = 原码负数：补码 = 反码 + 1
+原码反码补码的作用解决减法运算，CPU只有加法器。
+补码能用于加法的原因假设$x$是真值绝对值，考虑到计算机加法会溢出，有$$ x_f +">
   
     <link rel="alternative" href="/atom.xml" title="Benny Wong" type="application/atom+xml">
   
@@ -160,55 +173,125 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2016-03-26-true-onse-coplement-coplemental" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/08/2015-04-08-lua-start/" class="archive-article-date">
-  	<time datetime="2015-04-08T15:00:00.000Z" itemprop="datePublished">4月 8</time>
+    <div class="article-meta">
+      <a href="/2016/03/26/2016-03-26-true-onse-coplement-coplemental/" class="article-date">
+  	<time datetime="2016-03-25T16:00:00.000Z" itemprop="datePublished">2016-03-26</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/08/2015-04-08-lua-start/">Lua</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      原码，反码，补码
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lua/">Lua</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Base/">Base</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/Programming/">Programming</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="原码（true_code）">原码（true code）</h3><p>原码 = 符号位 + 真值绝对值</p>
+<h3 id="反码（onse_complement_code）">反码（onse complement code）</h3><p>正数：反码 = 原码<br>负数：反码 = 原码取反（符号位不变）</p>
+<h3 id="补码（complemental_code）">补码（complemental code）</h3><p>正数：补码 = 原码<br>负数：补码 = 反码 + 1</p>
+<h3 id="原码反码补码的作用">原码反码补码的作用</h3><p>解决减法运算，CPU只有加法器。</p>
+<h3 id="补码能用于加法的原因">补码能用于加法的原因</h3><p>假设$x$是真值绝对值，考虑到计算机加法会溢出，有<br>$$ x_f + x + 1 = 0 $$<br>由此可得：<br>$$ -x = x_f + 1 = x_b $$<br>所以我们可以用补码表示负数，用负数的补码做加法可以达到减法的效果</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/23/2017-03-23-xor-encryption/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          异或加密（xor encryption）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/05/12/2015-05-12-counting-sort/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计数排序（counting sort）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_tqq"></a>
+		<a class="jiathis_button_qzone"></a>
+		<a class="jiathis_button_renren"></a>
+		<a class="jiathis_button_douban"></a>
+		<a href="http://www.jiathis.com/share?uid=2034862" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript">
+	var jiathis_config = {data_track_clickback:'true'};
+	</script>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2034862" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016-03-26-true-onse-coplement-coplemental" data-title="原码，反码，补码" data-url="http://gotobenny.com/2016/03/26/2016-03-26-true-onse-coplement-coplemental/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"bennywong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
